@@ -84,20 +84,20 @@ while (count < 300)
     approx = alpha*WD*HD + beta*WH*HH; 
     
     %update
-    if WD_update
-        WD = WD .* ((X./approx)*(alpha * HD)')./(rep*(alpha * HD)');
-    else
-    end
     if HD_update
         HD = HD .* ((alpha * WD)'* (X./approx))./((alpha * WD)'*rep + sparsity);
     else
     end
-    if WH_update
-        WH = WH .* ((X./approx)*(beta * HH)')./(rep*(beta * HH)');
-    else
-    end
     if HH_update
         HH = HH .* ((beta * WH)'* (X./approx))./((beta * WH)'*rep);
+    else
+    end
+    if WD_update
+        WD = WD .* ((X./approx)*(alpha * HD)')./(rep*(alpha * HD)');
+    else
+    end
+    if WH_update
+        WH = WH .* ((X./approx)*(beta * HH)')./(rep*(beta * HH)');
     else
     end
     
