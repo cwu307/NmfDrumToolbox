@@ -36,7 +36,7 @@ HD_update = 0;
 WH_update = 0;
 HH_update = 0;
 
-if WH
+if ~isempty(WH)
     [numFreqH, rh] = size(WH);
 else
     WH = rand(numFreqD, rh);
@@ -50,14 +50,14 @@ elseif (numFreqH ~= numFreqX)
     error('Dimensionality of the WH does not match X');
 end
 
-if HD
+if ~isempty(HD)
     WD_update = 1;
 else
     HD = rand(rd, numFrames);
     HD_update = 1;
 end
 
-if HH
+if ~isempty(HH)
 else
     HH = rand(rh, numFrames);
     HH_update = 1;
