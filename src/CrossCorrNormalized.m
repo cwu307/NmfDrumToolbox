@@ -12,18 +12,10 @@
 
 function rho = CrossCorrNormalized(HH, HD)
 
-% normalization 
+% initialization 
 [rh, hLen] = size(HH);
 [rd, dLen] = size(HD);
-HH_N = zeros(rh, hLen);
-HD_N = zeros(rd, dLen);
-
-for i = 1:rh
-    HH_N(i, :) = HH(i, :)/ norm(HH(i, :), 2);
-end
-for i = 1:rd
-    HD_N(i, :) = HD(i, :)/ norm(HD(i, :), 2);
-end
+rho = zeros(rd, rh);
 
 % compute rho 
 for i = 1:rh
