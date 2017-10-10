@@ -5,16 +5,16 @@
 % The extracted onsets of HH, BD, SD are visualized respectively.
 %
 % CW @ GTCMT 2015
-%function demo()
+function demo()
 
 %read file
 filePath = '../demo/test_audio.wav';
-[x, fs] = wavread(filePath);
+[x, fs] = audioread(filePath);
 t = [0:length(x)-1]'*1/fs;
 
 %transcription 
 addpath('../src');
-[hh, bd, sd] = NmfDrum(filePath, 'Am1');
+[hh, bd, sd] = NmfDrum(filePath, 'NmfD');
 rmpath('../src');
 
 %audio playback

@@ -42,7 +42,7 @@ end
 fprintf('Selected method is %s\n', method);
 
 %//load file
-[x, fs] = wavread(filePath); 
+[x, fs] = audioread(filePath); 
 x = mean(x,2); %down-mixing   
 x = resample(x, 44100, fs); %sample rate consistency
 fs = 44100;
@@ -66,6 +66,13 @@ elseif strcmp(method, 'Am1')
 elseif strcmp(method, 'Am2')
     [~, HD, ~, ~, ~] = Am2(X, param.WD, param.maxIter, param.rh,...
         param.sparsity);
+      
+elseif strcmp(method, 'SaNmf')
+    [~, HD, ~] = SaNmf(X, param.WD, param.maxIter, 4);      
+    
+elseif strcmp(method, 'NmfD')
+    [PD, HD, ~] = NmfD(X, param.WD, param.maxIter, 10);         
+
 end
 
 [drumOnsetTime, drumOnsetNum] = OnsetDetection(HD, fs, param.windowSize, ...

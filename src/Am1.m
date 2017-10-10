@@ -22,7 +22,7 @@ function [WD, HD, WH, HH, iterErr] = Am1(X, WD, rh, rhoThres, maxIter, sparsity)
 iterErr = zeros(maxIter, 1);
 
 for i = 1:maxIter
-    fprintf('%g iteration of template adaptation\n', i);
+    %fprintf('%g iteration of template adaptation\n', i);
     
     %//NMF decomposition
     [WD, HD, WH, HH, err] = PfNmf(X, WD, [], [], [], rh, sparsity);
