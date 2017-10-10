@@ -1,5 +1,15 @@
-// NMF DRUM TOOLBOX V1.00
+// NMF DRUM TOOLBOX V1.01
 // Latest update: July 2015 
+
+Update Notes
+============
+New methods included! (SA-NMF [1] and NMFD [2-4])
+
+For more information, please refer to the following publications: 
+[1] Christian Dittmar and Daniel Gärtner: Real-time transcription and separation of drum recordings based on NMF decomposition, DAFx 2014
+[2] P. Smaragdis, “Non-negative matrix factor deconvolution; extraction of multiple sound sources from monophonic inputs,” in Proc. Intl. Conf. on Independent Component Analysis and Blind Signal Separation (ICA), Grenada, Spain, 2004, pp. 494–499.
+[3] H. Lindsay-Smith, S. McDonald, and M. Sandler, “Drumkit transcription via convolutive NMF,” in Proc. Intl. Conf. on Digital Audio Effects (DAFx), York, UK, September 2012.
+[4] C. Dittmar and M. Müller, “Reverse Engineering the Amen Break – Score-informed Separation and Restoration applied to Drum Recordings,” IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 24, no. 9, pp. 1531–1543, 2016.
 
 Introduction
 ============
